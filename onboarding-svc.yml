@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: onboarding
+ labels:
+   app: onboarding
+spec:
+ selector:
+   app: onboarding
+ ports:
+   - port: 5001
+     targetPort: 5001
+     protocol: TCP
+ 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: onboarding
+spec:
+ selector:
+   matchLabels:
+     app: onboarding
+ replicas: 1
+ template:
+   metadata:
+     labels:
+       app: onboarding
+   spec:
+     containers:
+     - name: onboarding
+       image: umangnangal/onboarding:v1
+       imagePullPolicy: Always
+       ports:
+       - containerPort: 5001
+         name: onboarding
+       env:
+       - name: MYSQL_ROOT_PASSWORD
+         valueFrom:
+           secretKeyRef:
+             name: mysqlpwd
+             key: password
+       - name: MYSQL_DATABASE
+         value: "todo_db"

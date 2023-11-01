@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "acedce6b-4e68-4432-a889-df15ac876723",
+		"name": "Ride Management Driver Onboarding Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21316684"
+	},
+	"item": [
+		{
+			"name": "Register Driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"profile\": {\n        \"first_name\": \"Umang\",\n        \"last_name\": \"Agrawal\",\n        \"email\": \"umangnangal@gmail.com\",\n        \"mobile\": \"0123456789\"\n    },\n    \"credentials\": {\n        \"password\": {\n            \"value\": \"sample123\"\n        },\n        \"recovery_question\": {\n            \"question\": \"Which is your favourite car?\",\n            \"answer\": \"Virtus\"\n        }\n    },\n    \"vehicle_details\": {\n        \"vehicle\": \"Tata Altroz\",\n        \"plate_number\": \"KA53 ML 0074\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/drivers",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Drivers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"profile\": {\n        \"first_name\": \"Umang\",\n        \"last_name\": \"Agrawal\",\n        \"email\": \"umangnangal96@gmail.com\",\n        \"mobile\": \"0123456789\"\n    },\n    \"credentials\": {\n        \"password\": {\n            \"value\": \"sample123\"\n        },\n        \"recovery_question\": {\n            \"question\": \"Which is your favourite car?\",\n            \"answer\": \"Virtus\"\n        }\n    },\n    \"vehicle_details\": {\n        \"vehicle\": \"Tata Altroz\",\n        \"plate_number\": \"KA53 ML 0074\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/drivers",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Driver's availability",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"profile\": {\n        \"first_name\": \"Umang\",\n        \"last_name\": \"Agrawal\",\n        \"email\": \"umangnangal96@gmail.com\",\n        \"mobile\": \"0123456789\"\n    },\n    \"credentials\": {\n        \"password\": {\n            \"value\": \"sample123\"\n        },\n        \"recovery_question\": {\n            \"question\": \"Which is your favourite car?\",\n            \"answer\": \"Virtus\"\n        }\n    },\n    \"vehicle_details\": {\n        \"vehicle\": \"Tata Altroz\",\n        \"plate_number\": \"KA53 ML 0074\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/drivers/umangnangal@gmail.com/availability",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"drivers",
+						"umangnangal@gmail.com",
+						"availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toggle Driver's availability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/drivers/umangnangal@gmail.com/availability",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"drivers",
+						"umangnangal@gmail.com",
+						"availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Drivers Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"profile\": {\n        \"first_name\": \"Umang\",\n        \"last_name\": \"Agrawal\",\n        \"email\": \"umangnangal96@gmail.com\",\n        \"mobile\": \"0123456789\"\n    },\n    \"credentials\": {\n        \"password\": {\n            \"value\": \"sample123\"\n        },\n        \"recovery_question\": {\n            \"question\": \"Which is your favourite car?\",\n            \"answer\": \"Virtus\"\n        }\n    },\n    \"vehicle_details\": {\n        \"vehicle\": \"Tata Altroz\",\n        \"plate_number\": \"KA53 ML 0074\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/drivers/umangnangal@gmail.com",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"drivers",
+						"umangnangal@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trigger Driver Onboarding request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/drivers/umangnangal@gmail.com/onboard",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"drivers",
+						"umangnangal@gmail.com",
+						"onboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take action on Onboarding request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"Accept\",\n    \"comment\": \"everythings looks fine\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/approvals/umangnangal@gmail.com",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"approvals",
+						"umangnangal@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List approvals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/v1/approvals",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"approvals"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
